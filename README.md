@@ -11,3 +11,6 @@ python ./screenblock.py
 ```
 
 exe 파일로 만들어 배포가능
+```
+pyinstaller -F screenblock.py    # -F 한파일로 만들기 위함
+```
