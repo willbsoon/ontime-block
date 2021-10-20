@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-import os
 import sys
 import time
 import curses
@@ -59,7 +58,7 @@ def printStr(screenWidth, screenHeight, currentMouseX, currentMouseY, blockType)
     stdscr.addstr(23,0,'전 체 사 이 즈 : {:>4}, {:>4} / 현 재  위 치 : {:>4}, {:>4} '
               .format(screenWidth, screenHeight, currentMouseX, currentMouseY))
     
-    stdscr.addstr(24,0,'기 준  시 간 에  따 라  마 우 스  위 치  변 화 를  체 크 해 서  기 준 시 간 동 안  변 화 가  없 으 면  하 단 부 를  클 릭 해 서  온 타 임  작 동 을  무 력 화  합 니 다. ')
+    stdscr.addstr(24,0,'마 우 스 의  위 치  변 화 를  체 크 해 서  기 준 시 간 동 안  움 직 이 지 않 으 면  화 면  하 단 부 를  클 릭 해 서  온 타 임  작 동 을  무 력 화  합 니 다 . ')
     if blockType ==  PASS:
         stdscr.addstr(26,0,' '*100)
         stdscr.addstr(26,0,'현 재 위 치 : {:>4}, {:>4} // pass! '.format(currentMouseX, currentMouseY))
@@ -68,7 +67,7 @@ def printStr(screenWidth, screenHeight, currentMouseX, currentMouseY, blockType)
         stdscr.addstr(26,0,'[{}] {:0>4} 번 째  동 작 /// ({:>4},{:>4}) 위 치  클 릭 '
                           .format(datetime.now(), CNT, int(screenWidth*4/5), screenHeight))
     stdscr.addstr(27,0,'경 과 시 간 : {:>2}min {:>2}sec /// {}sec '.format(int(timer/60), timer%60, timer))
-    stdscr.addstr(28,0,'중 단 을   원 하 시 면   창 을   종 료 하 세 요 ')
+    stdscr.addstr(28,0,'중 단 을   원 하 시 면   창 을   종 료 하 세 요 . ')
     stdscr.refresh()
     
 
