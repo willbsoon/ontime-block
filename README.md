@@ -37,3 +37,9 @@ pip install pyinstaller           # 배포를 위해
 ```
 pyinstaller -F screenblock.py    # -F 한파일로 만들기 위함
 ```
+
+
+windows에서 win + R 눌러서 시작프로그램에 등록할 수 있음  
+`shell:startup` 입력하면 폴더가 열림  
+파일 복사해서 넣으면 시작프로그램에 등록 됨.
+
